@@ -1,0 +1,451 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="600">
+            <!-- Add Controls for Previewer Here -->
+            <StackPanel>
+                <Button Content="Button" />
+                <TextBlock Text="TextBlock" />
+                <TextBox />
+                <RadioButton />
+                <CheckBox />
+            </StackPanel>
+        </Border>
+    </Design.PreviewWith>
+    <!-- Add Styles Here -->
+
+
+    <Style Selector="Button">
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="Foreground" Value="#363636" />
+        <Setter Property="Background" Value="#CCCCCC" />
+        <Setter Property="FontFamily" Value="SF Pro Display" />
+        <Setter Property="FontWeight" Value="500" />
+        <Setter Property="FontSize" Value="17" />
+        <Setter Property="BorderBrush" Value="#424242" />
+        <Setter Property="BorderThickness" Value="2" />
+    </Style>
+    <Style Selector="Button:pointerover/template/ ContentPresenter">
+        <Setter Property="BorderBrush" Value="#CCCCCC" />
+        <Setter Property="Background" Value="#CCCCCC" />
+    </Style>
+
+    <Style Selector="Button.Panel">
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="Foreground" Value="#939393" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="FontFamily" Value="SF Pro Display" />
+        <Setter Property="FontWeight" Value="500" />
+        <Setter Property="FontSize" Value="17" />
+        <Setter Property="BorderBrush" Value="#424242" />
+        <Setter Property="BorderThickness" Value="0" />
+    </Style>
+
+
+    <!--~~~~~~~~~~~BUTTONPOST~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <Style Selector="Button.Permission">
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="Foreground" Value="#363636" />
+        <Setter Property="Background" Value="#D6FFE0" />
+        <Setter Property="FontFamily" Value="SF Pro Display" />
+        <Setter Property="FontWeight" Value="500" />
+        <Setter Property="FontSize" Value="17" />
+        <Setter Property="BorderBrush" Value="#424242" />
+        <Setter Property="BorderThickness" Value="2" />
+    </Style>
+    <Style Selector="Button:pointerover.Permission /template/ ContentPresenter">
+        <Setter Property="BorderBrush" Value="Black" />
+        <Setter Property="Background" Value="#D6FFE0" />
+    </Style>
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <Style Selector="Button.Continue">
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="Foreground" Value="#939393" />
+        <Setter Property="Background" Value="#CCCCCC" />
+        <Setter Property="FontFamily" Value="SF Pro Display" />
+        <Setter Property="FontWeight" Value="500" />
+        <Setter Property="FontSize" Value="17" />
+        <Setter Property="BorderBrush" Value="#424242" />
+        <Setter Property="BorderThickness" Value="2" />
+    </Style>
+    <Style Selector="Button:pointerover.Continue /template/ ContentPresenter">
+        <Setter Property="BorderBrush" Value="Black" />
+    </Style>
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <Style Selector="Button.Pause">
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="Foreground" Value="#939393" />
+        <Setter Property="Background" Value="#CCCCCC" />
+        <Setter Property="FontFamily" Value="SF Pro Display" />
+        <Setter Property="FontWeight" Value="500" />
+        <Setter Property="FontSize" Value="17" />
+        <Setter Property="BorderBrush" Value="#424242" />
+        <Setter Property="BorderThickness" Value="2" />
+    </Style>
+    <Style Selector="Button:pointerover.Pause /template/ ContentPresenter">
+        <Setter Property="BorderBrush" Value="Black" />
+        <Setter Property="Background" Value="Khaki" />
+    </Style>
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <Style Selector="Button.Stop">
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="Foreground" Value="#939393" />
+        <Setter Property="Background" Value="#CCCCCC" />
+        <Setter Property="FontFamily" Value="SF Pro Display" />
+        <Setter Property="FontWeight" Value="500" />
+        <Setter Property="FontSize" Value="17" />
+        <Setter Property="BorderBrush" Value="#424242" />
+        <Setter Property="BorderThickness" Value="2" />
+    </Style>
+    <Style Selector="Button:pointerover.Stop /template/ ContentPresenter">
+        <Setter Property="BorderBrush" Value="Black" />
+        <Setter Property="Background" Value="Tomato" />
+    </Style>
+
+
+    <!--~~~~~~~~~~~POSTGROUPBOX~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <Style Selector="TextBlock.Post">
+        <Setter Property="Foreground" Value="#646464" />
+        <Setter Property="FontSize" Value="17" />
+        <Setter Property="FontFamily" Value="SF Pro Display" />
+        <Setter Property="FontWeight" Value="500" />
+    </Style>
+
+
+    <!--~~~~~~~~~~~~~~~STATEGROUPBOX~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <Style Selector="TextBlock.State">
+        <Setter Property="Foreground" Value="#646464" />
+        <Setter Property="FontSize" Value="17" />
+        <Setter Property="FontFamily" Value="SF Pro Display" />
+        <Setter Property="FontWeight" Value="500" />
+    </Style>
+
+
+    <!--~~~~~~~~~~~~~~~~~~~~TASKGROUPBOX~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <Style Selector="TextBlock.Task">
+        <Setter Property="Foreground" Value="#0066CC" />
+        <Setter Property="FontSize" Value="17" />
+        <Setter Property="FontFamily" Value="SF Pro Display" />
+        <Setter Property="FontWeight" Value="500" />
+    </Style>
+
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~TEXTBOX~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <Style Selector="TextBox.GroupPost">
+        <Setter Property="FontWeight" Value="500" />
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="FontFamily" Value="SF Pro Display" />
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="BorderBrush" Value="#BFBFBF" />
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="LineHeight" Value="11"></Setter>
+
+    </Style>
+
+
+    <!--~~~~~~~~~~~~MinimumDoseOfAdditive~~~~~~~~~~~~~~~~~~~~--><!--
+    <Style Selector="TextBox.MinimumDoseOfAdditive">
+        <Setter Property="Background" Value="#DFDFDF" />
+        <Setter Property="BorderBrush" Value="#BFBFBF" />
+
+    </Style>
+    --><!--~~~~~~~~~~~~MINDOSE~~~~~~~~~~~~~~~~--><!--
+    <Style Selector="TextBox.MinDose">
+        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="BorderBrush" Value="#BFBFBF" />
+
+    </Style>
+
+
+    --><!--~~~~~~~~~~~~~~EARTH~~~~~~~~~~~~~~~~--><!--
+    <Style Selector="TextBox.Earth">
+        <Setter Property="Foreground" Value="#363636" />
+        <Setter Property="Background" Value="#DFDFDF" />
+        <Setter Property="FontWeight" Value="500" />
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="FontFamily" Value="SF Pro Display" />
+        <Setter Property="LineHeight" Value="10" />
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="BorderBrush" Value="#BFBFBF" />
+
+    </Style>
+    --><!--~~~~~~~~~~EARTHSTATE1~~~~~~~~~~~~~--><!--
+    <Style Selector="TextBox.EarthState1">
+        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="BorderBrush" Value="#BFBFBF" />
+
+    </Style>
+    --><!--~~~~~~~~~~EARTHCIRCLE1~~~~~~~~~~~~~~~~~~~~~--><!--
+    <Style Selector="TextBox.EarthCircle1">
+        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="BorderBrush" Value="#BFBFBF" />
+
+    </Style>
+
+    --><!--~~~~~~~~~~~~~~EARTH~~~~~~~~~~~~~~~~--><!--
+    <Style Selector="TextBox.Earth">
+        <Setter Property="Foreground" Value="#363636" />
+        <Setter Property="Background" Value="#DFDFDF" />
+        <Setter Property="FontWeight" Value="500" />
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="FontFamily" Value="SF Pro Display" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="BorderBrush" Value="#BFBFBF" />
+
+    </Style>
+    --><!--~~~~~~~~~~EARTHSTATE1~~~~~~~~~~~~~--><!--
+    <Style Selector="TextBox.EarthState1">
+        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="BorderBrush" Value="#BFBFBF" />
+
+    </Style>
+    --><!--~~~~~~~~~~EARTHCIRCLE1~~~~~~~~~~~~~~~~~~~~~--><!--
+    <Style Selector="TextBox.EarthCircle1">
+        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="BorderBrush" Value="#BFBFBF" />
+
+    </Style>
+
+
+    --><!--~~~~~~~~~~~~~LIMITADDITIVES~~~~~~~~~~~~~~~~~~--><!--
+    <Style Selector="TextBox.LimitAdditives">
+        <Setter Property="Foreground" Value="#363636" />
+        <Setter Property="Background" Value="#DFDFDF" />
+        <Setter Property="FontWeight" Value="500" />
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="FontFamily" Value="SF Pro Display" />
+        <Setter Property="LineHeight" Value="10" />
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="BorderBrush" Value="#BFBFBF" />
+
+    </Style>
+    --><!--~~~~~~~~~~LIMITADDDOSE~~~~~~~~~~~~~--><!--
+    <Style Selector="TextBox.LimitAddDose">
+        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="BorderBrush" Value="#BFBFBF" />
+
+    </Style>
+    --><!--~~~~~~~~~~LIMITADDDOSE~~~~~~~~~~~~~~~~~~~~~--><!--
+    <Style Selector="TextBox.LimitAddDose">
+        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="BorderBrush" Value="#BFBFBF" />
+
+    </Style>
+
+
+    --><!--~~~~~~~~~~~~~~EARTH2~~~~~~~~~~~~~~~~--><!--
+    <Style Selector="TextBox.Earth2">
+        <Setter Property="Foreground" Value="#363636" />
+        <Setter Property="Background" Value="#DFDFDF" />
+        <Setter Property="FontWeight" Value="500" />
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="FontFamily" Value="SF Pro Display" />
+        <Setter Property="LineHeight" Value="10" />
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="BorderBrush" Value="#BFBFBF" />
+
+    </Style>
+    --><!--~~~~~~~~~~EARTHSTATE2~~~~~~~~~~~~~--><!--
+    <Style Selector="TextBox.EarthState2">
+        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="BorderBrush" Value="#BFBFBF" />
+
+    </Style>
+    --><!--~~~~~~~~~~EARTHCIRCLE2~~~~~~~~~~~~~~~~~~~~~--><!--
+    <Style Selector="TextBox.EarthCircle2">
+        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="BorderBrush" Value="#BFBFBF" />
+
+    </Style>
+
+
+    --><!--~~~~~~~~~~~~~~~~~VOLUMEADDERDOSE~~~TEXTBOX~~~~~~~~~~~~~~~~~~~~~~~~~~--><!--
+    <Style Selector="TextBox.VolumeAdderDose">
+        <Setter Property="Foreground" Value="#363636" />
+        <Setter Property="BorderBrush" Value="#BFBFBF" />
+        <Setter Property="FontWeight" Value="500" />
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="Background" Value="#DFDFDF" />
+        <Setter Property="FontFamily" Value="SF Pro Display" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+
+    </Style>
+    --><!--~~~~~~~~~~VolumeAdder~~~~~~~~~~~~~--><!--
+    <Style Selector="TextBox.VolumeAdder">
+        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="BorderBrush" Value="#BFBFBF" />
+    </Style>-->
+
+    <!--~~~~~~~~~~~~~~~~~~TEXTBLOCKSTATE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <Style Selector="TextBlock.State">
+        <Setter Property="Background" Value="#FFC2C2" />
+    </Style>
+    <Style Selector="TextBox.ModeCont">
+        <Setter Property="Foreground" Value="#363636" />
+        <Setter Property="Background" Value="#DFDFDF" />
+        <Setter Property="FontWeight" Value="500" />
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="FontFamily" Value="SF Pro Display" />
+        <Setter Property="LineHeight" Value="10" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+    </Style>
+    <Style Selector="Button.Settings2">
+        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderBrush" Value="#BFBFBF" />
+    </Style>
+
+
+    <Style Selector="TabItem">
+        <Setter Property="FontWeight" Value="400" />
+        <Setter Property="FontSize" Value="17" />
+        <Setter Property="FontFamily" Value="Outfit" />
+    </Style>
+
+
+    <Style Selector="Button.User">
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="FontSize" Value="17" />
+        <Setter Property="FontFamily" Value="Outfit" />
+    </Style>
+
+    <Style Selector="TextBlock.User1">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontFamily" Value="inter" />
+    </Style>
+
+    <Style Selector="TextBlock.User2">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontFamily" Value="inter" />
+        <Setter Property="Foreground" Value="#898989" />
+    </Style>
+
+    <Style Selector="TextBlock">
+        <Setter Property="FontFamily" Value="SF Pro Display" />
+        <Setter Property="FontWeight" Value=" 600" />
+        <Setter Property="FontSize" Value="14" />
+    </Style>
+
+    <Style Selector="Button:pointerover/template/ ContentPresenter">
+        <Setter Property="BorderBrush" Value="#898989" />
+        <Setter Property="Background" Value="#CCCCCC" />
+    </Style>
+    <!--~~~~~~~~~СТИЛЬ~LOGINVIEW~~~~~~~~~~-->
+    <Style Selector="Svg.title">
+        <Setter Property="Height" Value="20" />
+        <Setter Property="Width" Value="20" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+    <!--~~~~~~~~~~~~~TEXTBLOCK~TITLE~~~~~~~~~~~~~~-->
+    <Style Selector="TextBlock.title">
+        <Setter Property="FontFamily" Value="Outfit" />
+        <Setter Property="FontWeight" Value="700" />
+        <Setter Property="FontSize" Value="17" />
+    </Style>
+    <!--~~~~~~~~~~~MAIN~TEXTBLOCK~~~~~~~~~~~~~~-->
+    <Style Selector="TextBlock.CurUser">
+        <Setter Property="FontWeight" Value="700" />
+        <Setter Property="FontSize" Value="17" />
+        <Setter Property="FontFamily" Value="Outfit" />
+    </Style>
+    <Style Selector="TextBlock.CurUser2">
+        <Setter Property="FontWeight" Value="400" />
+        <Setter Property="FontSize" Value="17" />
+        <Setter Property="FontFamily" Value="Outfit" />
+        <Setter Property="Margin" Value="20 0 0 0" />
+    </Style>
+    <!--~~~~~~~~~~TEXT~~~~BOX~~~~~~~~~~~~~~~~~-->
+    <Style Selector="TextBox.User">
+        <!--<Setter Property="Watermark" Value="Пользователь"/>-->
+        <Setter Property="FontWeight" Value="500" />
+        <Setter Property="FontSize" Value="17" />
+        <Setter Property="FontFamily" Value="SF Pro Display" />
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="Width" Value="414" />
+        <Setter Property="Height" Value="40" />
+    </Style>
+    <!--~~~~~~~~~~BUTTON~~~~~~~~~~~~-->
+    <Style Selector="Button.Login">
+        <Setter Property="HorizontalAlignment" Value="Right" />
+        <Setter Property="Height" Value="40" />
+        <Setter Property="Width" Value="140" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="Background" Value="#005197" />
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="Margin" Value="12" />
+    </Style>
+
+
+    <!--~~~~~~~~~~SETTINGSTASKVIEW~~~~~~~~~~~~~~-->
+    <Style Selector="Button.Task">
+        <Setter Property="Height" Value="40" />
+        <Setter Property="Width" Value="140" />
+        <Setter Property="Background" Value="#e1e1e1" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderBrush" Value="#bfbfbf" />
+        <Setter Property="CornerRadius" Value="0" />
+    </Style>
+
+    <Style Selector="Button.TaskUp">
+        <Setter Property="Height" Value="40" />
+        <Setter Property="Width" Value="40" />
+        <Setter Property="Background" Value="#e1e1e1" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderBrush" Value="#bfbfbf" />
+        <Setter Property="CornerRadius" Value="0" />
+    </Style>
+
+    <Style Selector="TextBlock.Task">
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="FontFamily" Value="Sf Pro Display" />
+        <Setter Property="FontWeight" Value="500" />
+        <Setter Property="FontSize" Value="17" />
+        <Setter Property="Foreground" Value="Black" />
+    </Style>
+
+
+    <!--~~~~~~~~SETTINGSVIEW~~~~~~~~~-->
+    <Style Selector="TextBlock.tblockS">
+        <Setter Property="FontWeight" Value="500" />
+        <Setter Property="FontFamily" Value="sf pro display" />
+        <Setter Property="FontSize" Value="17" />
+    </Style>
+
+    <Style Selector="DataGrid" />
+
+
+    <!--Уменьшить border когда заземление 0-->
+    <Style Selector="Border[Tag=1]">
+        <Setter Property="Width" Value="227" />
+        <Setter Property="Height" Value="140" />
+        <Setter Property="BorderThickness" Value="2 2 2 2" />
+    </Style>
+
+    <Style Selector="Border[Tag=0]">
+        <Setter Property="Width" Value="227" />
+        <Setter Property="Height" Value="74" />
+    </Style>
+
+   <!--Когда пост свернут--> 
+    <Style Selector="TextBox.HidePost">
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontWeight" Value="700"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="BorderBrush" Value="#424242"/>
+        <Setter Property="CornerRadius" Value="0"/>
+    </Style>
+</Styles>

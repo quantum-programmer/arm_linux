@@ -1,0 +1,44 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Design.PreviewWith>
+      <!-- Add Controls for Previewer Here -->
+  </Design.PreviewWith>
+
+    <Style Selector="TabItem">
+        <Setter Property="FontFamily" Value="Outfit"/>
+        <Setter Property="FontSize" Value="17"/>
+        <Setter Property="FontWeight" Value="400"/>
+        <Setter Property="Background" Value="#DCDCDC"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="#DCDCDC"/>
+    </Style>
+
+    <Style Selector="GroupBox">
+        <Setter Property="FontSize" Value="17"/>
+        <Setter Property="FontWeight" Value="700"/>
+        <Setter Property="FontFamily" Value="Sf Pro Display"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="#BFBFBF"/>
+        <Setter Property="CornerRadius" Value="0"></Setter>
+    </Style>
+
+    <Style Selector="TextBlock">
+        <Setter Property="FontSize" Value="17"/>
+        <Setter Property="FontFamily" Value="Sf Pro Display"/>
+        <Setter Property="FontWeight" Value="500"/>
+    </Style>
+
+    <Style Selector="TextBox">
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="#BFBFBF"/>
+    </Style>
+
+    <Style Selector="CheckBox">
+        <Setter Property="FontSize" Value="17"/>
+        <Setter Property="FontFamily" Value="Sf Pro Display"/>
+        <Setter Property="FontWeight" Value="500"/>
+        <Setter Property="CornerRadius" Value="0"/>
+    </Style>
+
+	</Styles>
+

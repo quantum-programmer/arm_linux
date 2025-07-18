@@ -1,0 +1,57 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="460" d:DesignHeight="350"
+        x:Class="ARM.LoginView"
+        Title="LoginView">
+    <Window.Styles>
+        <StyleInclude Source="/Styles/Styles.axaml" />
+    </Window.Styles>
+    <Grid Background="#F1F8FE" ShowGridLines="False">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Background="White" 
+                    Orientation="Horizontal"
+                    Spacing="5">
+            <Svg Path="/Assets/prom.svg"
+                 Height="16" 
+                 Width="16"
+                 HorizontalAlignment="Left" 
+                 VerticalAlignment="Center" 
+                 Classes=""/>
+            <TextBlock Text="Запуск от имени другого пользователя"
+                       FontFamily="Outfit"
+                       FontSize="17"
+                       FontWeight="400" />
+        </StackPanel>
+        <StackPanel Grid.Row="1" 
+                    Margin="10">
+            <StackPanel Orientation="Horizontal"
+                        Spacing="8">
+                <TextBlock Text="Текущий пользователь"
+                           Classes="CurUser"/>
+            </StackPanel>
+            <TextBlock Text="PROMPRIBOR\a.savelev"
+                       Classes="CurUser2"/>
+            <StackPanel Orientation="Horizontal"
+                        Spacing=""
+                        Margin="0 0 0 0">
+                <TextBlock Text="Войдите в аккаунт"
+                           Classes="CurUser"/>
+            </StackPanel>
+            <TextBlock Text="Введите учетную запись пользователя"
+                       Classes="CurUser2"/>
+            <TextBox Watermark="Пользователь"
+                     Classes="User" />
+            <TextBlock Text="Введите пароль"
+                       Classes="CurUser2"/>
+            <TextBox Watermark="Пароль"
+                     Classes="User"/>
+            <Button Content="Вход" 
+                    Classes="Login"/>
+        </StackPanel>
+    </Grid>
+</Window>

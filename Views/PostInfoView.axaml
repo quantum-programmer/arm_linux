@@ -1,0 +1,46 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="215"
+        x:Class="ARM.PostInfoView"
+        Title="PostInfoView"
+        ExtendClientAreaToDecorationsHint="True"
+        ExtendClientAreaChromeHints="Default"
+        ExtendClientAreaTitleBarHeightHint="-1"
+        SystemDecorations="Full">
+<Grid ShowGridLines="False">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+		<StackPanel Grid.Row="0"
+                    Orientation="Horizontal"
+                    Spacing="5"
+                    Margin="10">
+			<Svg Path="/Assets/prom.svg"
+                 Height="16" Width="16"
+                 HorizontalAlignment="Left" VerticalAlignment="Center" />
+			<TextBlock Text="Информация о посте"
+                       FontFamily="Outfit"
+                       FontSize="17"
+                       FontWeight="400" />
+		</StackPanel>
+		<DataGrid Grid.Row="1"
+                  IsReadOnly="True"
+                  CanUserReorderColumns="True"
+                  CanUserResizeColumns="True"
+                  CanUserSortColumns="False"
+                  GridLinesVisibility="All"
+                  BorderThickness="1" BorderBrush="Gray">
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="№ поста" />
+				<DataGridTextColumn Header="Контр" />
+				<DataGridTextColumn Header="Адрес" />
+                <DataGridTextColumn Header="Прошивка" />
+                <DataGridTextColumn Header="Виды продуктов" />
+
+
+			</DataGrid.Columns>
+		</DataGrid>
+	</Grid></Window>

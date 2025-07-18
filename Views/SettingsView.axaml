@@ -1,0 +1,895 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1070" d:DesignHeight="925"
+        x:Class="ARM.SettingsView"
+        Height="925" Width="1070"
+        WindowStartupLocation="CenterOwner"
+        WindowState="Normal"
+        ExtendClientAreaToDecorationsHint="true"
+        ExtendClientAreaChromeHints="PreferSystemChrome"
+        ExtendClientAreaTitleBarHeightHint="-1"
+        SystemDecorations="Full"
+        CanResize="False">
+    <Window.Styles>
+        <StyleInclude Source="/Styles/Styles2.axaml" />
+    </Window.Styles>
+    <Grid ShowGridLines="False">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+
+        <Panel>
+            <StackPanel Orientation="Horizontal"
+                        Spacing="5"
+                        Margin="5">
+                <Svg Path="/Assets/prom.svg"
+                     Height="16"
+                     Width="16"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Top"
+                     Margin="10 0 0 0" />
+                <TextBlock Text="Параметры" />
+            </StackPanel>
+        </Panel>
+        <TabControl Grid.Row="0" 
+                    Margin="5 30 0 0">
+            <!--ВКЛАДКА ОБЩИЕ-->
+            <TabItem Header="Общие"
+                     FontWeight="400"
+                     FontSize="17"
+                     FontFamily="Outfit">
+                <Grid ShowGridLines="False">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <StackPanel>
+                        <TextBlock Text="Связь с корпоративной системой учета нефтепродуктов" />
+
+                        <TextBox Width="770"
+                                 Height="40"
+                                 HorizontalAlignment="Left"
+                                 Watermark="Отсутствует"
+                                 FontWeight="500"
+                                 FontFamily="Sf pro display"
+                                 FontSize="17"
+                                 CornerRadius="0"
+                                 BorderBrush="#BFBFBF" />
+
+                        <TextBlock Text="Номер нефтебазы в корпоративной системе учета" />
+
+                        <TextBox Height="40"
+                                 Width="60"
+                                 HorizontalAlignment="Left"
+                                 FontWeight="500"
+                                 FontFamily="sf pdo display"
+                                 FontSize="17"
+                                 CornerRadius="0"
+                                 BorderBrush="#BFBFBF" />
+
+                        <TextBlock Text="Политика учета нефтепродуктов" />
+
+                        <TextBox Width="770"
+                                 Height="40"
+                                 HorizontalAlignment="Left"
+                                 Watermark="Использовать встроенный модуль учета, отпуск при закрытой смене запрещен"
+                                 FontWeight="500"
+                                 FontFamily="sf pdo display"
+                                 FontSize="17"
+                                 CornerRadius="0"
+                                 BorderBrush="#BFBFBF" />
+                        <Separator />
+                        <StackPanel Spacing="5">
+                            <StackPanel Orientation="Horizontal">
+
+                                <TextBlock Text="Минимальный интервал между пусками, сек"
+                                           VerticalAlignment="Center" />
+
+                                <TextBox Width="70"
+                                         Height="40"
+                                         HorizontalAlignment="Left"
+                                         HorizontalContentAlignment="Center"
+                                         CornerRadius="0"
+                                         Margin="103.5 10 0 0"
+                                         BorderBrush="#BFBFBF" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+
+                                <TextBlock Text="Максимальная длительность сеанса пользователя в мин."
+                                           VerticalAlignment="Center" />
+
+                                <TextBox Width="70"
+                                         Height="40"
+                                         HorizontalAlignment="Left"
+                                         HorizontalContentAlignment="Center"
+                                         CornerRadius="0"
+                                         Margin="9 0 0 0"
+                                         BorderBrush="#BFBFBF" />
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal">
+
+                                <TextBlock Text="Текущий сезон"
+                                           VerticalAlignment="Center" />
+
+                                <TextBox Width="70"
+                                         Height="40"
+                                         HorizontalAlignment="Left"
+                                         HorizontalContentAlignment="Center"
+                                         CornerRadius="0"
+                                         Margin="338 0 0 0"
+                                         BorderBrush="#BFBFBF" />
+                            </StackPanel>
+                        </StackPanel>
+                        <Separator />
+                        <GroupBox Header="Задания"
+                                  Height="220"
+                                  Width="718"
+                                  HorizontalAlignment="Left"
+                                  BorderBrush="#BFBFBF">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal">
+
+                                    <CheckBox VerticalAlignment="Center"
+                                              CornerRadius="0" />
+
+                                    <TextBlock Text="Запретить операторам отмену связи задания"
+                                               VerticalAlignment="Center" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+
+                                    <CheckBox VerticalAlignment="Center"
+                                              CornerRadius="0" />
+
+                                    <TextBlock Text="Запретить операторам налив без задания"
+                                               VerticalAlignment="Center" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox VerticalAlignment="Center"
+                                              CornerRadius="0" />
+
+                                    <TextBlock Text="Запретить операторам слив без задания"
+                                               VerticalAlignment="Center" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox VerticalAlignment="Center"
+                                              CornerRadius="0" />
+
+                                    <TextBlock Text="Считать выполненными задания при достижении заданного объема"
+                                               VerticalAlignment="Center" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox VerticalAlignment="Center"
+                                              CornerRadius="0" />
+
+                                    <TextBlock Text="Разрешить операторам возвращать выполненные задания "
+                                               VerticalAlignment="Center" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+
+                                    <CheckBox VerticalAlignment="Center"
+                                              CornerRadius="0" />
+
+                                    <TextBlock Text="Разрешить задание дозы по массе"
+                                               VerticalAlignment="Center" />
+                                </StackPanel>
+                            </StackPanel>
+                        </GroupBox>
+
+
+                        <GroupBox Header="События"
+                                  Height="100"
+                                  Width="718"
+                                  HorizontalAlignment="Left">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox VerticalAlignment="Center"
+                                              CornerRadius="0" />
+                                    <TextBlock Text="Связывание событий двойным нажатием"
+                                               VerticalAlignment="Center"
+                                               FontWeight="500"
+                                               FontFamily="sf pdo display"
+                                               FontSize="17" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox VerticalAlignment="Center"
+                                              CornerRadius="0" />
+                                    <TextBlock
+                                        Text="Разрешить связывать несколько событий завершения отпуска с одним заданием"
+                                        VerticalAlignment="Center"
+                                        FontWeight="500"
+                                        FontFamily="sf pdo display"
+                                        FontSize="17" />
+                                </StackPanel>
+                            </StackPanel>
+                        </GroupBox>
+
+
+                        <GroupBox Header="Безопасность"
+                                  Height="60"
+                                  Width="718"
+                                  HorizontalAlignment="Left">
+
+                            <StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox VerticalAlignment="Center"
+                                              CornerRadius="0" />
+                                    <TextBlock Text="Полностью останавливать налив при переполнении емкости"
+                                               VerticalAlignment="Center"
+                                               FontWeight="500"
+                                               FontFamily="sf pdo display"
+                                               FontSize="17" />
+                                </StackPanel>
+                            </StackPanel>
+                        </GroupBox>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+            <!--ВКЛАДКА БАЗА ДАННЫХ-->
+            <TabItem Header="База данных"
+                     FontWeight="400"
+                     FontSize="17"
+                     FontFamily="Outfit">
+                <Grid>
+                    <StackPanel>
+                        <TextBlock Text="Автоматическая дефрагментация БД"
+                                   FontWeight="400"
+                                   FontFamily="Outfit"
+                                   FontSize="17" />
+                        <TextBox Width="770"
+                                 Height="40"
+                                 HorizontalAlignment="Left"
+                                 Watermark="Выполнять только при бездействиивсех поств"
+                                 FontWeight="500"
+                                 FontFamily="Sf pro display"
+                                 FontSize="17"
+                                 CornerRadius="0" />
+
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0 10 0 0">
+
+                            <CheckBox VerticalAlignment="Center"
+                                      CornerRadius="0" />
+
+                            <TextBlock Text="Связывание событий двойным нажатием"
+                                       VerticalAlignment="Center"
+                                       FontWeight="500"
+                                       FontFamily="sf pdo display"
+                                       FontSize="17" />
+                        </StackPanel>
+                        <GroupBox Header="Минимальная давность информации при удалении "
+                                  Height="200"
+                                  Width="700"
+                                  HorizontalAlignment="Left"
+                                  Margin="0 10 0 0">
+
+                            <StackPanel Spacing="10"
+                                        Margin="10">
+
+                                <StackPanel Orientation="Horizontal"
+                                            Spacing="10">
+
+                                    <TextBlock Text="Протокол работы оборудования, суток"
+                                               VerticalAlignment="Center"
+                                               FontWeight="500"
+                                               FontFamily="sf pdo display"
+                                               FontSize="17" />
+
+                                    <TextBox Width="81" Height="40"
+                                             Watermark="5"
+                                             FontWeight="500"
+                                             FontFamily="Sf pro display"
+                                             FontSize="17"
+                                             CornerRadius="0" />
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Выполненные задания, суток"
+                                               VerticalAlignment="Center"
+                                               FontWeight="500"
+                                               FontFamily="sf pdo display"
+                                               FontSize="17" />
+
+                                    <TextBox Width="81"
+                                             Height="40"
+                                             Watermark="1000"
+                                             FontWeight="500"
+                                             FontFamily="Sf pro display"
+                                             FontSize="17"
+                                             CornerRadius="0"
+                                             Margin="89 0 0 0" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Журнал событий, суток"
+                                               VerticalAlignment="Center"
+                                               FontWeight="500"
+                                               FontFamily="sf pdo display"
+                                               FontSize="17" />
+
+                                    <TextBox Width="81"
+                                             Height="40"
+                                             Watermark="1000"
+                                             FontWeight="500"
+                                             FontFamily="Sf pro display"
+                                             FontSize="17"
+                                             CornerRadius="0"
+                                             Margin="135 0 0 0" />
+                                </StackPanel>
+                            </StackPanel>
+                        </GroupBox>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+            <!--ВКЛАДКА ВИД-->
+            <TabItem Header="Вид"
+                     FontWeight="400"
+                     FontSize="17"
+                     FontFamily="Outfit">
+                <StackPanel Spacing="5">
+                    <GroupBox Header="Расположение областей главного окна "
+                              Height="100"
+                              Width="718"
+                              HorizontalAlignment="Left">
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <RadioButton
+                                    FontWeight="500"
+                                    FontFamily="Sf pro display"
+                                    FontSize="17"
+                                    CornerRadius="0"
+                                    Margin="0 0 0 0" />
+                                <TextBlock Text="Область мнемосхем слева, область выбранного поста справа вверху"
+                                           VerticalAlignment="Center"
+                                           FontWeight="500"
+                                           FontFamily="sf pdo display"
+                                           FontSize="17" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <RadioButton
+                                    FontWeight="500"
+                                    FontFamily="Sf pro display"
+                                    FontSize="17"
+                                    CornerRadius="0"
+                                    Margin="0 0 0 0" />
+                                <TextBlock Text="Область мнемосхем вверху, область выбранного поста слева внизу"
+                                           VerticalAlignment="Center"
+                                           FontWeight="500"
+                                           FontFamily="sf pdo display"
+                                           FontSize="17" />
+                            </StackPanel>
+                        </StackPanel>
+                    </GroupBox>
+                    <StackPanel Orientation="Horizontal"
+                                Spacing="10">
+                        <GroupBox Header="Порядок расположения мнемосхем "
+                                  Height="100"
+                                  Width="380"
+                                  HorizontalAlignment="Left"
+                                  Margin="0 0 0 20">
+                            <StackPanel Spacing="">
+                                <StackPanel Orientation="Horizontal"
+                                            Margin="0 0 0 0">
+                                    <RadioButton
+                                        FontWeight="500"
+                                        FontFamily="Sf pro display"
+                                        FontSize="17"
+                                        CornerRadius="0"
+                                        Margin="0 0 0 0" />
+                                    <TextBlock Text="Горизонтально, затем вертикально"
+                                               VerticalAlignment="Center"
+                                               FontWeight="500"
+                                               FontFamily="sf pdo display"
+                                               FontSize="17" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <RadioButton
+                                        FontWeight="500"
+                                        FontFamily="Sf pro display"
+                                        FontSize="17"
+                                        CornerRadius="0"
+                                        Margin="0 0 0 0" />
+                                    <TextBlock Text="Вертикально, затем горизонтально"
+                                               VerticalAlignment="Center"
+                                               FontWeight="500"
+                                               FontFamily="sf pdo display"
+                                               FontSize="17" />
+                                </StackPanel>
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox Header="Порядок вертикальной сортировки мнемосхем"
+                                  Height="100"
+                                  Width="450"
+                                  Margin="0 0 0 20">
+                            <StackPanel Spacing="0">
+                                <StackPanel Orientation="Horizontal">
+                                    <RadioButton
+                                        FontWeight="500"
+                                        FontFamily="Sf pro display"
+                                        FontSize="17"
+                                        CornerRadius="0"
+                                        Margin="0 0 0 0" />
+                                    <TextBlock Text="Сверху вниз"
+                                               VerticalAlignment="Center"
+                                               FontWeight="500"
+                                               FontFamily="sf pdo display"
+                                               FontSize="17" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <RadioButton
+                                        FontWeight="500"
+                                        FontFamily="Sf pro display"
+                                        FontSize="17"
+                                        CornerRadius="0"
+                                        Margin="0 0 0 0" />
+                                    <TextBlock Text="Снизу вверх"
+                                               VerticalAlignment="Center"
+                                               FontWeight="500"
+                                               FontFamily="sf pdo display"
+                                               FontSize="17" />
+                                </StackPanel>
+                            </StackPanel>
+                        </GroupBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal"
+                                Spacing="10">
+                        <GroupBox Header="Порядок расположения мнемосхем"
+                                  Height="250"
+                                  Width="380"
+                                  HorizontalAlignment="Left"
+                                  Margin="0 0 0 0">
+                            <StackPanel Spacing="0">
+                                <StackPanel Orientation="Horizontal"
+                                            Margin="0 0 0 0">
+                                    <RadioButton
+                                        FontWeight="500"
+                                        FontFamily="Sf pro display"
+                                        FontSize="17"
+                                        CornerRadius="0" />
+                                    <TextBlock Text="Мнемосхемы стандартные"
+                                               VerticalAlignment="Center"
+                                               FontWeight="500"
+                                               FontFamily="sf pdo display"
+                                               FontSize="17" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <RadioButton
+                                        FontWeight="500"
+                                        FontFamily="Sf pro display"
+                                        FontSize="17"
+                                        CornerRadius="0" />
+                                    <TextBlock Text="Мнемосхемы “Роснефть”"
+                                               VerticalAlignment="Center"
+                                               FontWeight="500"
+                                               FontFamily="sf pdo display"
+                                               FontSize="17" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <RadioButton
+                                        FontWeight="500"
+                                        FontFamily="Sf pro display"
+                                        FontSize="17"
+                                        CornerRadius="0" />
+                                    <TextBlock Text="Мнемосхемы “Газпромнефть”"
+                                               VerticalAlignment="Center"
+                                               FontWeight="500"
+                                               FontFamily="sf pdo display"
+                                               FontSize="17" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <RadioButton
+                                        FontWeight="500"
+                                        FontFamily="Sf pro display"
+                                        FontSize="17"
+                                        CornerRadius="0" />
+                                    <TextBlock Text="Мнемосхемы “Газпром”"
+                                               VerticalAlignment="Center"
+                                               FontWeight="500"
+                                               FontFamily="sf pdo display"
+                                               FontSize="17" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <RadioButton
+                                        FontWeight="500"
+                                        FontFamily="Sf pro display"
+                                        FontSize="17"
+                                        CornerRadius="0" />
+                                    <TextBlock Text="Мнемосхемы “Татнефть”"
+                                               VerticalAlignment="Center"
+                                               FontWeight="500"
+                                               FontFamily="sf pdo display"
+                                               FontSize="17" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <RadioButton
+                                        FontWeight="500"
+                                        FontFamily="Sf pro display"
+                                        FontSize="17"
+                                        CornerRadius="0" />
+                                    <TextBlock Text="Мнемосхемы “Башнефть”"
+                                               VerticalAlignment="Center"
+                                               FontWeight="500"
+                                               FontFamily="sf pdo display"
+                                               FontSize="17" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <RadioButton
+                                        FontWeight="500"
+                                        FontFamily="Sf pro display"
+                                        FontSize="17"
+                                        CornerRadius="0" />
+                                    <TextBlock Text="Мнемосхемы “Лукойл”"
+                                               VerticalAlignment="Center"
+                                               FontWeight="500"
+                                               FontFamily="sf pdo display"
+                                               FontSize="17" />
+                                </StackPanel>
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox Header="Масштаб"
+                                  Height="180"
+                                  Width="300"
+                                  VerticalAlignment="Top">
+                            <StackPanel Spacing="10">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Масштаб мнемосхем"
+                                               VerticalAlignment="Center"
+                                               FontWeight="500"
+                                               FontFamily="sf pdo display"
+                                               FontSize="17" />
+                                    <TextBox Height="40"
+                                             Width="80"
+                                             Margin="11 0 0 0" 
+                                             CornerRadius="0"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Шрифт заданий"
+                                               VerticalAlignment="Center"
+                                               FontWeight="500"
+                                               FontFamily="sf pdo display"
+                                               FontSize="17" />
+                                    <TextBox Height="40"
+                                             Width="80"
+                                             Margin="53 0 0 0"
+                                             CornerRadius="0"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Шрифт событий"
+                                               VerticalAlignment="Center"
+                                               FontWeight="500"
+                                               FontFamily="sf pdo display"
+                                               FontSize="17" />
+                                    <TextBox Height="40"
+                                             Width="80"
+                                             Margin="50 0 0 0" 
+                                             CornerRadius="0"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </GroupBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Spacing="10">
+                        <GroupBox Header="Отображение"
+                                  Height="350"
+                                  Width="600"
+                                  HorizontalAlignment="Left">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal"
+                                            Margin="0 0 0 0">
+                                    <CheckBox
+                                        FontWeight="500"
+                                        FontFamily="Sf pro display"
+                                        FontSize="17"
+                                        CornerRadius="0"
+                                        Margin="0 0 0 0" />
+                                    <TextBlock Text="Показывать массу нефтепродуктов"
+                                               VerticalAlignment="Center" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox
+                                        FontWeight="500"
+                                        FontFamily="Sf pro display"
+                                        FontSize="17"
+                                        CornerRadius="0"
+                                        Margin="0 0 0 0" />
+                                    <TextBlock Text="Показывать объем для стандартных условий"
+                                               VerticalAlignment="Center" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox
+                                        FontWeight="500"
+                                        FontFamily="Sf pro display"
+                                        FontSize="17"
+                                        CornerRadius="0"
+                                        Margin="0 0 0 0" />
+                                    <TextBlock Text="Отображать расход объема в формате л/с"
+                                               VerticalAlignment="Center" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox
+                                        FontWeight="500"
+                                        FontFamily="Sf pro display"
+                                        FontSize="17"
+                                        CornerRadius="0"
+                                        Margin="0 0 0 0" />
+                                    <TextBlock Text="Текстовая расшифровка положения задвижки"
+                                               VerticalAlignment="Center" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox
+                                        FontWeight="500"
+                                        FontFamily="Sf pro display"
+                                        FontSize="17"
+                                        CornerRadius="0"
+                                        Margin="0 0 0 0" />
+                                    <TextBlock Text="Вести протокол журнала БУИ"
+                                               VerticalAlignment="Center"
+                                               Foreground="#FF4949" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox
+                                        FontWeight="500"
+                                        FontFamily="Sf pro display"
+                                        FontSize="17"
+                                        CornerRadius="0"
+                                        Margin="0 0 0 0" />
+                                    <TextBlock Text="Отображать мнемосхемы резервуаров"
+                                               VerticalAlignment="Center" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox
+                                        FontWeight="500"
+                                        FontFamily="Sf pro display"
+                                        FontSize="17"
+                                        CornerRadius="0"
+                                        Margin="0 0 0 0" />
+                                    <TextBlock Text="Показывать всплывающие подсказки"
+                                               VerticalAlignment="Center" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox
+                                        FontWeight="500"
+                                        FontFamily="Sf pro display"
+                                        FontSize="17"
+                                        CornerRadius="0"
+                                        Margin="0 0 0 0" />
+                                    <TextBlock Text="Подсветка цветом показаний датчиков положения и безопасности"
+                                               TextWrapping="Wrap"
+                                               VerticalAlignment="Center" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox
+                                        FontWeight="500"
+                                        FontFamily="Sf pro display"
+                                        FontSize="17"
+                                        CornerRadius="0"
+                                        Margin="0 0 0 0" />
+                                    <TextBlock Text="Максимальный размер окна программы "
+                                               VerticalAlignment="Center" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox
+                                        FontWeight="500"
+                                        FontFamily="Sf pro display"
+                                        FontSize="17"
+                                        CornerRadius="0"
+                                        Margin="0 0 0 0" />
+                                    <TextBlock Text="Фиксировать элементы окна"
+                                               VerticalAlignment="Center" />
+                                </StackPanel>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="Отпуск "
+                                  Height="180" Width="420"
+                                  VerticalAlignment="Top">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal"
+                                            Margin="0 10 0 0">
+                                    <CheckBox
+                                        FontWeight="500"
+                                        FontFamily="Sf pro display"
+                                        FontSize="17"
+                                        CornerRadius="0" />
+                                    <TextBlock Text="Приоритет вкладки без задания"
+                                               VerticalAlignment="Center" />
+                                </StackPanel>
+
+
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox
+                                        FontWeight="500"
+                                        FontFamily="Sf pro display"
+                                        FontSize="17"
+                                        CornerRadius="0" />
+                                    <TextBlock Text="Задание дозы по массе"
+                                               VerticalAlignment="Center" />
+                                </StackPanel>
+
+
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox
+                                        FontWeight="500"
+                                        FontFamily="Sf pro display"
+                                        FontSize="17"
+                                        CornerRadius="0" />
+                                    <TextBlock Text="Задание дозы в рублях"
+                                               VerticalAlignment="Center" />
+                                </StackPanel>
+
+
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox
+                                        FontWeight="500"
+                                        FontFamily="Sf pro display"
+                                        FontSize="17"
+                                        CornerRadius="0" />
+                                    <TextBlock Text="Кнопка назначить без перехода в разрешение"
+                                               TextWrapping="Wrap"
+                                               VerticalAlignment="Center" />
+                                </StackPanel>
+                            </StackPanel>
+                        </GroupBox>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+            <!--ВКЛАДКА ОПОВЕЩЕНИЯ-->
+            <TabItem Header="Оповещения">
+                <StackPanel>
+                    <StackPanel HorizontalAlignment="Left">
+                        <TextBlock
+                            Text="Файл звукового оповещения об ошибках связи с постами и ошибочных состояниях постов" />
+
+                        <TextBox Height="40"
+                                 Width="768"
+                                 Watermark="C:\sound\180119_0134.wav"
+                                 VerticalContentAlignment="Center"
+                                 CornerRadius="0"/>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Left">
+                        <TextBlock Text="Файл звукового оповещения об останове процесса по датчикам безопасности" />
+                        <TextBox Height="40"
+                                 Width="768"
+                                 Watermark="C:\sound\180119_0134.wav"
+                                 VerticalContentAlignment="Center"
+                                 CornerRadius="0"/>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Left">
+                        <TextBlock Text="Файл звукового оповещения об останове процесса по достижению заданной дозы" />
+                        <TextBox Height="40"
+                                 Width="768"
+                                 Watermark="C:\sound\180119_0134.wav"
+                                 VerticalContentAlignment="Center"
+                                 CornerRadius="0"/>
+                    </StackPanel>
+                    <GroupBox Header="Оповещение"
+                              Height="310" Width="820"
+                              HorizontalAlignment="Left">
+                        <StackPanel Spacing="10">
+                            <StackPanel Orientation="Horizontal">
+                                <CheckBox />
+                                <TextBlock Text="Звуковое оповещение"
+                                           VerticalAlignment="Center"
+                                           FontWeight="500"
+                                           FontFamily="sf pdo display"
+                                           FontSize="17" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <CheckBox />
+                                <TextBlock
+                                    Text="Подтверждение при завершении задания, когда Фактический объем меньше заданного"
+                                    VerticalAlignment="Center"
+                                    FontWeight="500"
+                                    FontFamily="sf pdo display"
+                                    FontSize="17" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <CheckBox />
+                                <TextBlock Text="Подтверждение при завершении задания, когда не рассчитана масса"
+                                           VerticalAlignment="Center"
+                                           FontWeight="500"
+                                           FontFamily="sf pdo display"
+                                           FontSize="17" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <CheckBox />
+                                <TextBlock
+                                    Text="Подтверждение при завершении задания. когда не рассчитан объем для стандартных условий"
+                                    VerticalAlignment="Center"
+                                    FontWeight="500"
+                                    FontFamily="sf pdo display"
+                                    FontSize="17" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <CheckBox />
+                                <TextBlock
+                                    Text="Подтверждение при закрытии программы когда присутствуют невыполненные задания"
+                                    VerticalAlignment="Center"
+                                    FontWeight="500"
+                                    FontFamily="sf pdo display"
+                                    FontSize="17" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <CheckBox />
+                                <TextBlock
+                                    Text="Подтверждения при закрытии программы, когда присутствуют несвязанные события"
+                                    VerticalAlignment="Center"
+                                    FontWeight="500"
+                                    FontFamily="sf pdo display"
+                                    FontSize="17" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <CheckBox />
+                                <TextBlock Text="Требовать ввод лобараторных данных"
+                                           VerticalAlignment="Center"
+                                           FontWeight="500"
+                                           FontFamily="sf pdo display"
+                                           FontSize="17" />
+                            </StackPanel>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+            </TabItem>
+            <!--ВКЛАДКА ДЕЙСТВИЯ-->
+            <TabItem Header="Действия"
+                     FontWeight="400"
+                     FontSize="17"
+                     FontFamily="Outfit">
+                <StackPanel Spacing="20">
+                    <GroupBox Header="Разрешить обобщение команд при нажатии Shift"
+                              Height="140"
+                              Width="450"
+                              HorizontalAlignment="Left">
+                        <StackPanel Spacing="10">
+                            <StackPanel Orientation="Horizontal">
+                                <CheckBox />
+                                <TextBlock Text="Отпуск/Пуск - все посты"
+                                           VerticalAlignment="Center"
+                                           FontWeight="500"
+                                           FontFamily="sf pdo display"
+                                           FontSize="17" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <CheckBox />
+                                <TextBlock Text="Продолжить - все посты"
+                                           VerticalAlignment="Center"
+                                           FontWeight="500"
+                                           FontFamily="sf pdo display"
+                                           FontSize="17" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <CheckBox />
+                                <TextBlock Text="Выполнено - все задания"
+                                           VerticalAlignment="Center"
+                                           FontWeight="500"
+                                           FontFamily="sf pdo display"
+                                           FontSize="17" />
+                            </StackPanel>
+                        </StackPanel>
+                    </GroupBox>
+                    <StackPanel Orientation="Horizontal"
+                                Spacing="35">
+                        <TextBlock Text="Задержка обобщенного пуска постов, сек"
+                                   VerticalAlignment="Center" />
+                        <TextBox Height="40"
+                                 Width="80"
+                                 CornerRadius="0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Spacing="10">
+                        <TextBlock Text="Минимальный интервал между пусками, сек" />
+                        <TextBox Height="40"
+                                 Width="80" 
+                                 CornerRadius="0"
+                                 Margin="4 0 0 0"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

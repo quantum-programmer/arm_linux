@@ -1,0 +1,113 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="580" d:DesignHeight="587"
+        x:Class="ARM.InfoPageView"
+        Title="InfoPageView"
+        Height="500" Width="606"
+        MaxHeight="500" MinWidth="636"
+        CanResize="False"
+        WindowStartupLocation="CenterOwner"
+        Background="White"
+		ExtendClientAreaToDecorationsHint="True"
+        ExtendClientAreaChromeHints="Default"
+        ExtendClientAreaTitleBarHeightHint="-1"
+        SystemDecorations="Full">
+
+    <Grid ShowGridLines="False">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120"/>
+			<RowDefinition Height="auto"/>
+			<RowDefinition Height=""/>
+		</Grid.RowDefinitions>
+		<Image Grid.Row="1" Grid.RowSpan="" Margin="0 70 0 0"
+		   Source="/Assets/Zavod.png"
+		   VerticalAlignment="Center"
+		   Height="207" Width="550" />
+		<StackPanel Orientation="Horizontal"
+					VerticalAlignment="Center" HorizontalAlignment="Center"
+					Spacing="20">
+		<Image Grid.Row="0"
+	           Source="/Assets/Prom.png"
+	           VerticalAlignment="Center"
+	           Height="69" Width="196" />
+			<StackPanel VerticalAlignment="Center">
+			<TextBlock Text="Управление сервером"
+					   FontWeight="Bold" FontSize="20"
+					   VerticalAlignment="Center"/>
+				<StackPanel Orientation="Horizontal">
+			<TextBlock Text="Версия: "
+					   FontSize="20" FontWeight="SemiLight"
+					   VerticalAlignment="Center"/>
+				<Label Content="{}"
+					   FontWeight="SemiLight" FontSize="20"
+					   VerticalAlignment="Center"/>
+				</StackPanel>
+			</StackPanel>
+		</StackPanel>
+		<Image Grid.Row="1" Grid.RowSpan="2"
+			   Source="/Assets/Group89.png"
+			   HorizontalAlignment="Left" VerticalAlignment="Center"
+			   Height="304" Width="304" />
+		<Rectangle Grid.Row="0" Grid.RowSpan="3" 
+                   Fill="#1976D2" 
+				   VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+			<Rectangle.OpacityMask>
+				<LinearGradientBrush StartPoint="-80%,500%" EndPoint="190%,330%">
+					<LinearGradientBrush.GradientStops>
+						<GradientStop Offset="0" Color="Red" />
+						<GradientStop Offset="1" Color="Transparent" />
+					</LinearGradientBrush.GradientStops>
+				</LinearGradientBrush>
+			</Rectangle.OpacityMask>
+		</Rectangle>
+
+		<StackPanel Grid.Row="1">
+			<StackPanel>
+			<TextBlock Text="ТЕХНИЧЕСКАЯ ПОДДЕРЖКА"
+                       FontWeight="Bold" FontSize="20"
+					   HorizontalAlignment="Center"/>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal">
+			<StackPanel Margin="10">
+				<TextBlock Text="Программного обеспечения:"
+						   FontWeight="DemiBold" FontSize="20"/>
+				<StackPanel Margin="10 0 0 0">
+				<TextBlock Text="E-mail:opvu@prompribor.ru"
+						   FontSize="20"/>
+				<TextBlock Text="Т:	8(48677) 777 - 51"
+						   FontSize="20"/>
+				</StackPanel>
+			</StackPanel>
+
+			<StackPanel Margin="10">
+				<TextBlock Text="Оборудования:"
+						   FontWeight="DemiBold" FontSize="20"/>
+				<StackPanel Margin="10 0 0 0">
+				<TextBlock Text="E-mail:naladka@prompribor.ru"
+						   FontSize="20"/>
+				<TextBlock Text="Т:8(48677) 777 - 18"
+						   FontSize="20"/>
+				</StackPanel>
+			</StackPanel>
+			</StackPanel>
+		</StackPanel>
+		 <StackPanel Grid.Row="2"
+                    VerticalAlignment="" Spacing="2">
+            <TextBlock Text="Интернет магазин АО ''Промприбор'': store.prompribor.ru"
+                       HorizontalAlignment="Center"
+					   FontSize="16"/>
+            <TextBlock Text="Наш адрес: 303858, Орловская обл., г.Ливны, ул.Индустриальная 2П."
+                       HorizontalAlignment="Center"
+					   FontSize="16"/>
+            <TextBlock Text="Телефон: +7(48622)55598"
+                       HorizontalAlignment="Center"
+			 FontSize="16"/>
+            <TextBlock Text="E-mail: sales@prompribor.ru"
+                       HorizontalAlignment="Center"
+                       Margin=""
+		 FontSize="16"/>
+        </StackPanel>		
+    </Grid>
+</Window>

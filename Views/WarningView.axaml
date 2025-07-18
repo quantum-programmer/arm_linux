@@ -1,0 +1,47 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="150"
+        x:Class="ARM.WarningView"
+        Title="WarningView">
+    <Grid>
+        <Line StartPoint="0,0" EndPoint="0,290" Stroke="#DF7B00" StrokeThickness="5"
+              Margin="2 0 0 0" />
+        <StackPanel Margin="10">
+            <StackPanel Orientation="Horizontal"
+                        Spacing="8">
+                <Svg Path="/Assets/AlerCircle.svg"
+                     Height="20" Width="20"
+                     HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBlock Text="Предупреждение"
+                           FontFamily="SF Pro Display"
+                           FontWeight="700"
+                           FontSize="17" />
+            </StackPanel>
+            <TextBlock
+                Text="Требуемый объем не был задан. Будет использоваться заданный объем от предыдущего процесса продолжить? "
+                TextWrapping="Wrap"
+                FontFamily="SF Pro Display"
+                FontWeight="400"
+                FontSize="17"
+                Margin="28 0 0 0" />
+            <StackPanel Orientation="Horizontal"
+                        Spacing="8"
+                        Margin="30 0 0 0">
+                <Button Content="Да"
+                        HorizontalAlignment="Right"
+                        Width="60" Height="35"
+                        HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                        Background="#DF7B00" Foreground="White"
+                        FontFamily="Sf Pro Display" FontWeight="500" FontSize="17" />
+                <Button Content="Нет"
+                        HorizontalAlignment="Right"
+                        Width="60" Height="35"
+                        HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                        Background="#FCECDA" Foreground="#BA5D00"
+                        FontFamily="Sf Pro Display" FontWeight="500" FontSize="17" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

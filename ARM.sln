@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARM", "ARM.csproj", "{3935378F-5778-49A1-B6B5-44920DAFD3E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug2B|Any CPU = Debug2B|Any CPU
+		Debug2C|Any CPU = Debug2C|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Release2B|Any CPU = Release2B|Any CPU
+		Release2C|Any CPU = Release2C|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3935378F-5778-49A1-B6B5-44920DAFD3E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3935378F-5778-49A1-B6B5-44920DAFD3E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3935378F-5778-49A1-B6B5-44920DAFD3E2}.Debug2B|Any CPU.ActiveCfg = Debug2B|Any CPU
+		{3935378F-5778-49A1-B6B5-44920DAFD3E2}.Debug2B|Any CPU.Build.0 = Debug2B|Any CPU
+		{3935378F-5778-49A1-B6B5-44920DAFD3E2}.Debug2C|Any CPU.ActiveCfg = Debug2C|Any CPU
+		{3935378F-5778-49A1-B6B5-44920DAFD3E2}.Debug2C|Any CPU.Build.0 = Debug2C|Any CPU
+		{3935378F-5778-49A1-B6B5-44920DAFD3E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3935378F-5778-49A1-B6B5-44920DAFD3E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3935378F-5778-49A1-B6B5-44920DAFD3E2}.Release2B|Any CPU.ActiveCfg = Release2B|Any CPU
+		{3935378F-5778-49A1-B6B5-44920DAFD3E2}.Release2B|Any CPU.Build.0 = Release2B|Any CPU
+		{3935378F-5778-49A1-B6B5-44920DAFD3E2}.Release2C|Any CPU.ActiveCfg = Release2C|Any CPU
+		{3935378F-5778-49A1-B6B5-44920DAFD3E2}.Release2C|Any CPU.Build.0 = Release2C|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6A3779B-27A5-4762-AB38-ACB7ECA9A344}
+	EndGlobalSection
+EndGlobal

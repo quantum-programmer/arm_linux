@@ -1,0 +1,115 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="700" d:DesignHeight="360"
+        x:Class="ARM.SettingsTaskView"
+        Title="SettingsTaskView"
+        ExtendClientAreaToDecorationsHint="True"
+        ExtendClientAreaChromeHints="Default"
+        ExtendClientAreaTitleBarHeightHint="-1"
+        SystemDecorations="Full">
+
+    <Window.Styles>
+        <StyleInclude Source="/Styles/Styles.axaml" />
+    </Window.Styles>
+
+    <Grid ShowGridLines="False">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0"
+                    Orientation="Horizontal"
+                    Spacing="5"
+                    Margin="10">
+            <Svg Path="/Assets/prom.svg"
+                 Height="16" Width="16"
+                 HorizontalAlignment="Left" VerticalAlignment="Center"
+                 Classes="title" />
+            <TextBlock Text="Настройка заданий"
+                       FontFamily="Outfit"
+                       FontSize="17"
+                       FontWeight="400"
+                       Classes="title" />
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="1"
+                    Orientation="Horizontal"
+                    VerticalAlignment="Top"
+                    Spacing="10"
+                    Margin="5"
+                    Background="#F0F0F0">
+            <Button Classes="Task">
+                <StackPanel Orientation="Horizontal"
+                            Spacing="3"
+                            HorizontalAlignment="Center">
+                    <TextBlock Text="Добавить"
+                               Classes="Task" />
+                    <Svg Path="/Assets/plus.svg"
+                         Height="20" Width="20" />
+                </StackPanel>
+            </Button>
+
+            <Button Classes="Task">
+                <StackPanel Orientation="Horizontal"
+                            Spacing="3"
+                            HorizontalAlignment="Center">
+                    <TextBlock Text="Удалить"
+                               Classes="Task" />
+                    <Svg Path="/Assets/minus.svg"
+                         Height="20" Width="20" />
+                </StackPanel>
+            </Button>
+
+            <Button Classes="Task">
+                <StackPanel Orientation="Horizontal"
+                            Spacing="3"
+                            HorizontalAlignment="Center">
+                    <TextBlock Text="Сохранить"
+                               Classes="Task" />
+                    <Svg Path="/Assets/save.svg"
+                         Height="20" Width="20" />
+                </StackPanel>
+            </Button>
+
+            <Button Classes="Task">
+                <StackPanel Orientation="Horizontal"
+                            Spacing="3"
+                            HorizontalAlignment="Center">
+                    <TextBlock Text="Отменить"
+                               Classes="Task" />
+                    <Svg Path="/Assets/close.svg"
+                         Height="20" Width="20" />
+                </StackPanel>
+            </Button>
+
+            <Button Classes="TaskUp">
+                <Svg Path="/Assets/UP.svg" />
+            </Button>
+
+            <Button Classes="TaskUp">
+                <Svg Path="/Assets/Down.svg" />
+            </Button>
+        </StackPanel>
+
+        <DataGrid Grid.Row="2"
+                  IsReadOnly="True"
+                  CanUserReorderColumns="True"
+                  CanUserResizeColumns="True"
+                  CanUserSortColumns="False"
+                  GridLinesVisibility="All"
+                  BorderThickness="1" 
+			BorderBrush="Gray">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Время" />
+                <DataGridCheckBoxColumn Header="Точка"/>
+                <DataGridTextColumn Header="Выравнивание" />
+                 
+
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
